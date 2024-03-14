@@ -54,7 +54,12 @@ function App() {
     }
 
     const jsxlist = cart.map((price, index) => {
-      return <p key={index}>$ {price}</p>;
+      const item = bakeryData[index];
+      return (
+        <p key={index}>
+          {item.name} - ${price}
+        </p>
+      );
     });
 
     return jsxlist;
